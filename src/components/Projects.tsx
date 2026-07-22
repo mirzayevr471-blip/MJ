@@ -27,7 +27,7 @@ export default function Projects() {
   const allLabel = t.projects.all;
   const categories = [allLabel, "Flutter", "Python", "IoT", "Telegram Bot"];
 
-  const projects = t.projects.items.map((item, i) => ({
+  const projects = t.projects.items.map((item: any, i: number) => ({
     ...item,
     image: projectImages[i],
     tech: projectTech[i],
@@ -69,7 +69,7 @@ export default function Projects() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project: any, index: number) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -98,7 +98,7 @@ export default function Projects() {
                 <h3 className="text-xl font-bold mt-2 mb-3">{project.title}</h3>
                 <p className="text-secondary text-sm mb-4 line-clamp-2">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
+                  {project.tech.map((t: string) => (
                     <span key={t} className="px-3 py-1 bg-black/10 dark:bg-white/10 rounded-full text-xs font-medium">
                       {t}
                     </span>

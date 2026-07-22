@@ -25,7 +25,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">{f.quickLinks}</h4>
             <ul className="space-y-2">
-              {f.links.map((link) => (
+              {f.links.map((link: any) => (
                 <li key={link.href}>
                   <a href={link.href} className="text-secondary hover:text-primary transition-colors text-sm">
                     {link.label}

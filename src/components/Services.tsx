@@ -31,7 +31,7 @@ export default function Services() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {t.services.items.map((service, index) => (
+          {t.services.items.map((service: any, index: number) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}

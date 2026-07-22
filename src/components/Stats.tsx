@@ -35,7 +35,7 @@ function Counter({ value, label, icon, index }: { value: string; label: string; 
 export default function Stats() {
   const { t } = useLang();
 
-  const stats = t.stats.items.map((item, i) => ({
+  const stats = t.stats.items.map((item: any, i: number) => ({
     ...item,
     ...statValues[i],
   }));
@@ -55,7 +55,7 @@ export default function Stats() {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((stat, i) => (
+          {stats.map((stat: any, i: number) => (
             <Counter key={i} {...stat} index={i} />
           ))}
         </div>
